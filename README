@@ -1,0 +1,25 @@
+Contains, Nagios/cacti server installation pulling the latest from repository.
+
+The agent supports major linux flavors. Set up the Cacti_device_add.sh as cronjob.
+
+Edit Auto_server_installer.sh before running to change the default password
+
+1. Run the Auto_server_installer.sh on the server - this will host nagios and cacti.
+
+the service can be accessed by http://:/nagios
+
+http://:/cacti for cacti (Reporting tool)
+
+2. Run the Auto_agent_installer_new.sh on the machines, you need monitoring enabled. Note:
+
+3. Setup the crontab for Cacti_device_add.sh . A new devices are added to cacti repository as needed.
+
+Happy managing and monitoring. You can manage and monitor linux or Windows Servers. Yes there are Windows Nagios agent which can be monitored as well
+
+Follow the link below.
+
+http://nagios.sourceforge.net/docs/3_0/monitoring-windows.html
+
+Please contact us for your needs in managing and monitoring servers on premise or on cloud.
+
+
