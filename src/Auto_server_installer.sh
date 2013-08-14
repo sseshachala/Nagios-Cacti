@@ -10,10 +10,10 @@ password="n@g!0&Flexi"			# CHANGE THE PASSWORD IF REQUIRE
 Nag_web_user="nagiosadmin" 		# DO NOT CHANGE IT
 Nag_web_psw="Flex!n@g!0s"		# CHANGE THE PASSWORD IF REQUIRE
 
-Nagios_Core="http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.2.tar.gz"
-Nagios_Plugins="http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.15.tar.gz"
-NRPE="http://prdownloads.sourceforge.net/sourceforge/nagios/nrpe-2.12.tar.gz"
-GD="http://www.boutell.com/gd/http/gd-2.0.33.tar.gz"
+Nagios_Core="http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.5.0.tar.gz"
+Nagios_Plugins="http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.16.tar.gz"
+NRPE="http://prdownloads.sourceforge.net/sourceforge/nagios/nrpe-2.14.tar.gz"
+GD="http://autoapm.googlecode.com/files/gd-2.0.33.tar.gz"
 
 txtrst=$(tput sgr0) # Text reset
 txtred=$(tput setaf 1) # Red
@@ -109,13 +109,13 @@ install_type
 				wget $GD  
 				sleep 2 
 				echo "\nExtracting downloaded files....\n"
-				tar -xvf nagios-3.2.2.tar.gz
-				tar -xvf nagios-plugins-1.4.15.tar.gz
-				tar -xvf nrpe-2.12.tar.gz
+				tar -xvf nagios-3.5.0.tar.gz
+				tar -xvf nagios-plugins-1.4.16.tar.gz
+				tar -xvf nrpe-2.14.tar.gz
 				tar -xvf gd-2.0.33.tar.gz
 				sleep 2
 				echo "\nRemoving temp files....\n"
-				rm nagios-3.2.2.tar.gz nagios-plugins-1.4.15.tar.gz nrpe-2.12.tar.gz gd-2.0.33.tar.gz
+				rm nagios-3.5.0.tar.gz nagios-plugins-1.4.16.tar.gz nrpe-2.14.tar.gz gd-2.0.33.tar.gz
 				sleep 2
 				echo "\nInstalling the GD-Utils...."
 				sleep 2				
@@ -125,7 +125,7 @@ install_type
 				
 				echo "\n\nInstalling the Nagios Core...."			
 				sleep 2
-				cd ../nagios-3.2.2 
+				cd ../nagios-3.5.0 
 				./configure --with-command-group=nagcmd
 				sleep 1
 				make all
@@ -147,7 +147,7 @@ install_type
 				#perl -MCPAN -e 'install Net::SNMP'
 				echo "\n\nInstalling the Nagios Plug-ins...."			
 				sleep 2
-				cd ../nagios-plugins-1.4.15
+				cd ../nagios-plugins-1.4.16
 				#./configure --sysconfdir=/etc/nagios --localstatedir=/var/nagios --enable-perl-modules
 				./configure --with-nagios-user=nagios --with-nagios-group=nagios
 				sleep 1
@@ -167,7 +167,7 @@ install_type
 				sleep 2
 				
 				echo -e "\n\nInstalling the NRPE...."
-				cd ../nrpe-2.12
+				cd ../nrpe-2.14
 				./configure
 				make all
 				make install-plugin
