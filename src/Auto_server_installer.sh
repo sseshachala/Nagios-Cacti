@@ -3,7 +3,7 @@
 # Author: Team @ Hooduku for HoodukuCloud
 # Date : 09 SEP 2010
 # Purpose: This Script automates the setting up of Nagios Server.
-# Send feedback to info@hooduku.com
+# Send feedback to info@hooduku.com 
 # +-------------------------------------------------------------------------+
 username="nagios"			# DO NOT CHANGE IT
 password="n@g!0&Flexi"			# CHANGE THE PASSWORD IF REQUIRE
